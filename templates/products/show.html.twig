@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center"></h1>
+
+    <a href="{{path('create')}}">
+        <button class="btn btn-info btn-block">Create</button>
+    </a>
+
+    <div class="row mt-5">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">{{ product.id }}</th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.price }}. грн</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <a href="{{ path('products')}}">
+        <button class="btn btn-outline-success btn-block">Home</button>
+    </a>
+{% endblock %}
